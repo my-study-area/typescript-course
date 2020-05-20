@@ -11,3 +11,12 @@ npm install -g typescript
 ```bash
 tsc filename.ts
 ```
+## 04. Criando e configurando TSconfig - Mini-curso de TypeScript
+- cria o arquivo de configuração inicial
+```bash
+tsc --init
+```
+- monitora alterações typescript e compila automaticamente
+```bash
+tsc --watch
+```
