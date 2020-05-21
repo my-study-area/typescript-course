@@ -94,3 +94,15 @@ cart = {
     key: "fi"
 }
 ```
+## 06. Type Inference - Mini-curso de TypeScript
+
+//Type Inference
+```typescript
+let message2 = "mensagem definida";
+message2 = "string nova";
+
+window.addEventListener("click", (e) => {
+    console.log(e.target);
+});
+```
+
