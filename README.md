@@ -106,3 +106,36 @@ window.addEventListener("click", (e) => {
 });
 ```
 
+## 07. Type Aliases e Union - Mini-curso de TypeScript
+//Union    
+É um dos `types` do typescript que permite combinar dois `types`
+```typescript
+function logDetails(uid: string | number, item: string) {
+    console.log(`A product with ${uid} has a title as ${item}`);
+}
+logDetails(123, "sapato");
+logDetails("123", "sapato");
+```
+
+//Type Alias    
+Cria um novo nome para um `type` podendo usar os `tipos primitivos`, `unions`, `tuplas` e outros.
+```typescript
+//exemplo 01
+type Uid = string | number
+
+function logDetails(uid: Uid, item: string) {
+    console.log(`A product with ${uid} has a title as ${item}`);
+}
+
+logDetails(123, "sapato");
+logDetails("123", "sapato");
+
+// exemplo 02
+type PLataform = 'Windows' | 'Linux' | 'Mac Os'
+function renderPlatform(platform: PLataform) {
+    return platform;
+}
+
+renderPlatform('Windows');
+renderPlatform('Linux');
+```
