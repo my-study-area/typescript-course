@@ -139,3 +139,44 @@ function renderPlatform(platform: PLataform) {
 renderPlatform('Windows');
 renderPlatform('Linux');
 ```
+## 08. Estendendo Type Aliases com Intersection - Mini-curso de TypeScript
+
+// accountInfo    
+// charInfo
+
+```typescript
+type AccountInfo = {
+    id: number;
+    name: string;
+    email?: string;
+};
+
+const account: AccountInfo = {
+    id: 123,
+    name: "Adriano"
+};
+
+type CharInfo = {
+    nickname: string;
+    level: number
+};
+
+const char: CharInfo = {
+    nickname: "adrianoavelino",
+    level: 100
+};
+```
+
+//intersection    
+Une dois aliases em um único alias
+
+```typescript
+type PlayerInfo = AccountInfo & CharInfo;
+
+const player: PlayerInfo = {
+    id: 123,
+    name: "Adriano",
+    nickname: "adriano",
+    level: 100
+};
+```
